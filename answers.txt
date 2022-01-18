@@ -3,9 +3,9 @@
 ******************************************************************************/
 
 Group members:
-- [...]
-- [...]
-- [...]
+- [Amin Mahmoudifard]
+- [Faiza Amjad]
+- [Yasamin Fazelidehkordi]
 
 /******************************************************************************
 ** Task: Figuring out the asymptotic complexity
