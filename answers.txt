@@ -17,7 +17,7 @@ Group members:
 Insertion.java on:
 
 - random inputs:      Quadratic
-- 95% sorted inputs:  Linearithmic
+- 95% sorted inputs:  Quadratic
 - sorted inputs:      Linear
 
 Quick.java on:

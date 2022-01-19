@@ -1,5 +1,6 @@
 import java.util.Random;
 
+
 /**
  *  For additional documentation on this implementation of quicksort,
  *  see <a href="https://algs4.cs.princeton.edu/23quick">Section 2.3</a>
@@ -17,6 +18,9 @@ public class Quick {
      * @param insertionSortCutoff  Switch to insertion sort in the recursive call for quicksorting a[lo..hi]
      *                             once the size of a[lo..hi] is less than the given cutoff value.
      */
+
+
+
     public Quick(boolean shuffleFirst, boolean useMedianOfThree, int insertionSortCutoff) {
         this.shuffleFirst = shuffleFirst;
         this.useMedianOfThree = useMedianOfThree;
@@ -35,6 +39,8 @@ public class Quick {
         if (shuffleFirst) {
             // TODO: Randomise the array before sorting.
             // Hint: There is a static method shuffle.
+            shuffle(a);
+
             throw new UnsupportedOperationException("to be implemented");
         }
 
@@ -48,8 +54,9 @@ public class Quick {
         if (hi <= lo) return;
 
         // TODO: check if the size of a[lo..hi] is below the cutoff value
-        if (false) {
+        if (hi - lo <= 100) {
             // TODO: Switch to insertion sort.
+            Insertion.sort(a, lo, hi);
             throw new UnsupportedOperationException("to be implemented");
         }
 
