@@ -54,7 +54,7 @@ public class Quick {
         if (hi <= lo) return;
 
         // TODO: check if the size of a[lo..hi] is below the cutoff value
-        if (hi - lo <= 100) {
+        if (hi - lo <= 60) {
             // TODO: Switch to insertion sort.
             Insertion.sort(a, lo, hi);
             //throw new UnsupportedOperationException("to be implemented");
