@@ -3,9 +3,9 @@
 ******************************************************************************/
 
 Group members:
-- [Amin Mahmoudifard]
-- [Faiza Amjad]
-- [Yasamin Fazelidehkordi]
+- Amin Mahmoudifard
+- Faiza Amjad
+- Yasamin Fazelidehkordi
 
 /******************************************************************************
 ** Task: Figuring out the asymptotic complexity
@@ -16,20 +16,20 @@ Group members:
 
 Insertion.java on:
 
-- random inputs:      [Quadratic] [Linearithmic] [Linear]
-- 95% sorted inputs:  [Quadratic] [Linearithmic] [Linear]
-- sorted inputs:      [Quadratic] [Linearithmic] [Linear]
+- random inputs:      Quadratic
+- 95% sorted inputs:  Linearithmic
+- sorted inputs:      Linear
 
 Quick.java on:
 
-- random inputs:      [Quadratic] [Linearithmic] [Linear]
-- 95% sorted inputs:  [Quadratic] [Linearithmic] [Linear]
-- sorted inputs:      [Quadratic] [Linearithmic] [Linear]
+- random inputs:      Linearithmic
+- 95% sorted inputs:  Linearithmic
+- sorted inputs:      Quadratic
 
 Merge.java on:
 
-- random inputs:      [Quadratic] [Linearithmic] [Linear]
-- 95% sorted inputs:  [Quadratic] [Linearithmic] [Linear]
+- random inputs:      Linearithmic
+- 95% sorted inputs:  Linearithmic
 - sorted inputs:      Linearithmic
 
 /******************************************************************************
