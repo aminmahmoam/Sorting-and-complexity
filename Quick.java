@@ -1,6 +1,5 @@
 import java.util.Random;
 
-
 /**
  *  For additional documentation on this implementation of quicksort,
  *  see <a href="https://algs4.cs.princeton.edu/23quick">Section 2.3</a>
@@ -18,9 +17,6 @@ public class Quick {
      * @param insertionSortCutoff  Switch to insertion sort in the recursive call for quicksorting a[lo..hi]
      *                             once the size of a[lo..hi] is less than the given cutoff value.
      */
-
-
-
     public Quick(boolean shuffleFirst, boolean useMedianOfThree, int insertionSortCutoff) {
         this.shuffleFirst = shuffleFirst;
         this.useMedianOfThree = useMedianOfThree;
@@ -37,11 +33,10 @@ public class Quick {
      */
     public void sort(int[] a) {
         if (shuffleFirst) {
+            shuffle(a);
             // TODO: Randomise the array before sorting.
             // Hint: There is a static method shuffle.
-            shuffle(a);
-
-            throw new UnsupportedOperationException("to be implemented");
+           // throw new UnsupportedOperationException("to be implemented");
         }
 
         sort(a, 0, a.length - 1);
@@ -54,16 +49,19 @@ public class Quick {
         if (hi <= lo) return;
 
         // TODO: check if the size of a[lo..hi] is below the cutoff value
-        if (hi - lo <= 100) {
-            // TODO: Switch to insertion sort.
+        if (hi-lo<=100) {
             Insertion.sort(a, lo, hi);
-            throw new UnsupportedOperationException("to be implemented");
+            // TODO: Switch to insertion sort.
+           // throw new UnsupportedOperationException("to be implemented");
         }
+        else {
 
-        int j = partition(a, lo, hi);
-        sort(a, lo, j-1);
-        sort(a, j+1, hi);
-        assert Insertion.isSorted(a, lo, hi);
+
+            int j = partition(a, lo, hi);
+            sort(a, lo, j - 1);
+            sort(a, j + 1, hi);
+            assert Insertion.isSorted(a, lo, hi);
+        }
     }
 
     // Partition the subarray a[lo..hi] so that
@@ -72,9 +70,11 @@ public class Quick {
     private int partition(int[] a, int lo, int hi) {
         if (useMedianOfThree) {
             // TODO: Find the median of the first, last and middle
+           int median = medianOfThree(a,lo,hi,(hi+lo)/2);
+            exchange(a,lo,median);
             // elements of a[lo..hi], and swap it with a[lo].
             // Hint: Use the static methods medianOfThree and exchange.
-            throw new UnsupportedOperationException("to be implemented");
+         //   throw new UnsupportedOperationException("to be implemented");
         }
 
         int i = lo;
