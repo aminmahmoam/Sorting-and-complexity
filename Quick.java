@@ -58,12 +58,13 @@ public class Quick {
             // TODO: Switch to insertion sort.
             Insertion.sort(a, lo, hi);
             //throw new UnsupportedOperationException("to be implemented");
-        }
+        } else {
 
-        int j = partition(a, lo, hi);
-        sort(a, lo, j-1);
-        sort(a, j+1, hi);
-        assert Insertion.isSorted(a, lo, hi);
+            int j = partition(a, lo, hi);
+            sort(a, lo, j - 1);
+            sort(a, j + 1, hi);
+            assert Insertion.isSorted(a, lo, hi);
+        }
     }
 
     // Partition the subarray a[lo..hi] so that
