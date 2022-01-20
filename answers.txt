@@ -41,13 +41,16 @@ Merge.java on:
 ******************************************************************************/
 
 Shuffling the array first:
-[no] [yes+what changes]
+no
+It improves the runtime of the sorting process but it does not change the complexity to linear and it stays linearithmic.
 
 Median-of-three pivot selection:
-[no] [yes+what changes]
+no
+It improves the runtime of the sorting process but it does not change the complexity to linear and it stays linearithmic.
 
 Insertion sort for small subarrays:
-[no] [yes+what changes]
+no
+It improves the runtime of the sorting process but it does not change the complexity to linear and it stays linearithmic.
 
 /******************************************************************************
 ** 3. What is a good cutoff to use for insertion sort?
@@ -55,13 +58,18 @@ Insertion sort for small subarrays:
 **    Remember that you should try to find the answer in a systematic way.
 ******************************************************************************/
 
-[...]
+By comparing the original numbers and improved ones, we could see that the runtimes of sorting processes for arrays of size
+300 and more have improved. However, the runtimes for arrays of size 100 and less than that have not improved.
+So, for first experiment we decided that 100 should be a good choice as a cutoff value. But, as we ran the tests it appeared
+that not only it has not improved but also it has gotten worse. So, we then tried lower values (90, 80, ...) and saw that
+60 can be the cutoff value since we observed improvements in the runtime of arrays of size 60 or less than that.
 
 /******************************************************************************
 ** 4. Which combination of improvements gives the best performance?
 ******************************************************************************/
 
-[...]
+We first tested all the improvements individually then we combined every two of them and at last we tested all of them
+together and we figured out that the combination of all three improvements, gives the best performance.
 
 /******************************************************************************
 ** Appendix: General information
@@ -69,16 +77,16 @@ Insertion sort for small subarrays:
 ** A. Approximately how many hours did you spend on the assignment?
 ******************************************************************************/
 
-[..group member..]:  [..hours..]
-[..group member..]:  [..hours..]
-[..group member..]:  [..hours..]
+Amin Mahmoudifard:  4 Hours
+Faiza Amjad:  [..hours..]
+Yasamin Fazelidehkordi:  5 Hours
 
 
 /******************************************************************************
 ** B. Are there any known bugs / limitations?
 ******************************************************************************/
 
-[...]
+Fortunately we did not get any error messages informing us about a bug.
 
 /******************************************************************************
 ** C. Did you collaborate with any other students on this lab?
@@ -87,13 +95,14 @@ Insertion sort for small subarrays:
 **    may have used in creating your design.
 ******************************************************************************/
 
-[...]
+No. We did this lab without help from any other groups/students.
 
 /******************************************************************************
 ** D. Describe any serious problems you encountered.                    
 ******************************************************************************/
 
-[...]
+There were some technical issues in cloning the project for one of the group members. However, we fixed it with the help
+of a TA.
 
 /******************************************************************************
 ** E. List any other comments here.
@@ -101,4 +110,4 @@ Insertion sort for small subarrays:
 **    from doing the assignment, and whether you enjoyed it.                                             
 ******************************************************************************/
 
-[...]
+

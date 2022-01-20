@@ -40,8 +40,6 @@ public class Quick {
             // TODO: Randomise the array before sorting.
             // Hint: There is a static method shuffle.
             shuffle(a);
-
-            //throw new UnsupportedOperationException("to be implemented");
         }
 
         sort(a, 0, a.length - 1);
@@ -57,7 +55,6 @@ public class Quick {
         if (hi - lo <= 60) {
             // TODO: Switch to insertion sort.
             Insertion.sort(a, lo, hi);
-            //throw new UnsupportedOperationException("to be implemented");
         } else {
 
             int j = partition(a, lo, hi);
@@ -77,7 +74,7 @@ public class Quick {
             // Hint: Use the static methods medianOfThree and exchange.
             int median = medianOfThree(a, lo, hi, (lo+hi)/2);
             exchange(a, lo, median);
-            //throw new UnsupportedOperationException("to be implemented");
+
         }
 
         int i = lo;
