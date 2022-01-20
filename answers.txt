@@ -60,9 +60,8 @@ It improves the runtime of the sorting process but it does not change the comple
 
 By comparing the original numbers and improved ones, we could see that the runtimes of sorting processes for arrays of size
 300 and more have improved. However, the runtimes for arrays of size 100 and less than that have not improved.
-So, for first experiment we decided that 100 should be a good choice as a cutoff value. But, as we ran the tests it appeared
-that not only it has not improved but also it has gotten worse. So, we then tried lower values (90, 80, ...) and saw that
-60 can be the cutoff value since we observed improvements in the runtime of arrays of size 60 or less than that.
+So, we decided that 100 should be a good choice as a cutoff value since, we observed that insertion sort gives a better
+performance than quick-sort in the runtime of arrays with less than 100 elements.
 
 /******************************************************************************
 ** 4. Which combination of improvements gives the best performance?
@@ -77,9 +76,9 @@ together and we figured out that the combination of all three improvements, give
 ** A. Approximately how many hours did you spend on the assignment?
 ******************************************************************************/
 
-Amin Mahmoudifard:  4 Hours
+Amin Mahmoudifard:  6 Hours
 Faiza Amjad:  [..hours..]
-Yasamin Fazelidehkordi:  5 Hours
+Yasamin Fazelidehkordi:  7 Hours
 
 
 /******************************************************************************

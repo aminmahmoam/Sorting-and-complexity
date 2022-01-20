@@ -52,7 +52,7 @@ public class Quick {
         if (hi <= lo) return;
 
         // TODO: check if the size of a[lo..hi] is below the cutoff value
-        if (hi - lo <= 60) {
+        if (hi - lo < 100 ) {
             // TODO: Switch to insertion sort.
             Insertion.sort(a, lo, hi);
         } else {
