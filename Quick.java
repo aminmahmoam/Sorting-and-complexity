@@ -36,10 +36,11 @@ public class Quick {
      * @param a the array to be sorted
      */
     public void sort(int[] a) {
+
         if (shuffleFirst) {
             // TODO: Randomise the array before sorting.
             // Hint: There is a static method shuffle.
-            shuffle(a);
+          //shuffle(a);  // We don't use shuffle
         }
 
         sort(a, 0, a.length - 1);
@@ -54,21 +55,22 @@ public class Quick {
         // TODO: check if the size of a[lo..hi] is below the cutoff value
         if (hi - lo < 100 ) {
             // TODO: Switch to insertion sort.
-            Insertion.sort(a, lo, hi);
-        } else {
+           Insertion.sort(a, lo, hi);}
 
+        else {
             int j = partition(a, lo, hi);
             sort(a, lo, j - 1);
             sort(a, j + 1, hi);
             assert Insertion.isSorted(a, lo, hi);
         }
+
     }
 
     // Partition the subarray a[lo..hi] so that
     //   a[lo..j-1] <= a[j] <= a[j+1..hi]
     // and return the index j.
     private int partition(int[] a, int lo, int hi) {
-        if (useMedianOfThree) {
+        if (true) {
             // TODO: Find the median of the first, last and middle
             // elements of a[lo..hi], and swap it with a[lo].
             // Hint: Use the static methods medianOfThree and exchange.
