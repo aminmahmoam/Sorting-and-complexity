@@ -40,7 +40,7 @@ public class Quick {
         if (shuffleFirst) {
             // TODO: Randomise the array before sorting.
             // Hint: There is a static method shuffle.
-          //shuffle(a);  // We don't use shuffle
+          shuffle(a);
         }
 
         sort(a, 0, a.length - 1);
@@ -53,7 +53,7 @@ public class Quick {
         if (hi <= lo) return;
 
         // TODO: check if the size of a[lo..hi] is below the cutoff value
-        if (hi - lo < 100 ) {
+        if (hi - lo < insertionSortCutoff) {
             // TODO: Switch to insertion sort.
            Insertion.sort(a, lo, hi);}
 
@@ -72,7 +72,7 @@ public class Quick {
     //   a[lo..j-1] <= a[j] <= a[j+1..hi]
     // and return the index j.
     private int partition(int[] a, int lo, int hi) {
-        if (true) {
+        if (useMedianOfThree) {
             // TODO: Find the median of the first, last and middle
             // elements of a[lo..hi], and swap it with a[lo].
             // Hint: Use the static methods medianOfThree and exchange.

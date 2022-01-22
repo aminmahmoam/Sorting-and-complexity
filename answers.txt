@@ -42,16 +42,16 @@ Merge.java on:
 
 Shuffling the array first:
 no
-It improves the runtime of the sorting process but it does not change the complexity.
+It improves the runtime of the sorting process, but it does not change the complexity.
 
 Median-of-three pivot selection:
 Yes
 It improves the runtime of the sorting process and changes the complexity of sorted array from quadratic to linearithmic but it
 does not change the complexity of 95% sorted and random arrays.
 
-Insertion sort for small subarrays:
+Insertion sort for small subarray:
 no
-It improves the runtime of the sorting process but it does not change the complexity.
+It improves the runtime of the sorting process, but it does not change the complexity.
 
 
 /******************************************************************************
