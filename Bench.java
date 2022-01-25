@@ -74,7 +74,7 @@ public class Bench {
 
     private static void testAlgorithm(Consumer<int[]> algorithm) throws TestException {
         for (int size = 0; size <= 1000; ++size)
-            for (int randomness : new int[] {0, 5, 100})
+            for (int randomness : new int[] {100, 5, 0})
                 check(generateSample(size, randomness), algorithm);
     }
 
