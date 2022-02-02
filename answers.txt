@@ -41,8 +41,10 @@ Merge.java on:
 ******************************************************************************/
 
 Shuffling the array first:
-no
-It improves the runtime of the sorting process, but it does not change the complexity.
+Yes
+It changes the complexity of sorted arrays from quadratic to linearithmic. However, it does not change the complexity
+of random and 95% sorted arrays.
+
 
 Median-of-three pivot selection:
 Yes
@@ -51,7 +53,7 @@ does not change the complexity of 95% sorted and random arrays.
 
 Insertion sort for small subarray:
 no
-It improves the runtime of the sorting process, but it does not change the complexity.
+It improves the runtime of the sorting process, but it does not change the complexity for any of the sortedness degrees.
 
 
 /******************************************************************************
@@ -60,10 +62,24 @@ It improves the runtime of the sorting process, but it does not change the compl
 **    Remember that you should try to find the answer in a systematic way.
 ******************************************************************************/
 
-By comparing the original numbers and improved ones, we could see that the runtimes of sorting processes for arrays of size
-300 and more have improved. However, the runtimes for arrays of size 100 and less than that have not improved.
-So, we decided that 100 should be a good choice as a cutoff value since, we observed that insertion sort gives a better
-performance than quick-sort in the runtime of arrays with less than 100 elements.
+By comparing the runtimes, we figured out that the initial cutoff value is 100 then we tested different values grater and
+less than 100 and we got the best performance for the cutoff value of 110. Our approach for the comparison was dividing
+the improved runtimes by the base runtimes to see how much each version of our cutoff value has improved the base case
+in terms of percentage. Improvement percentages are as follows:
+
+120: 11%
+115: 11%
+110: 20%
+105: 16%
+100: 13%
+90: 14%
+80: 12%
+70: 14%
+60: 18%
+50: 15%
+40: 13%
+
+As you can see the best improvement belongs to cutoff value of 110.
 
 /******************************************************************************
 ** 4. Which combination of improvements gives the best performance?
